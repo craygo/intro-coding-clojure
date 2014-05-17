@@ -1,5 +1,6 @@
-(ns begin.c
-  (use [clojure.repl]))
+(ns begin.c)
+
+;; naming and a function
 
 (nth "Hello World" 2)
 
@@ -9,9 +10,7 @@ s
 
 (nth s 2)
 
-(third "Hello World")
+(third s)
 
 (defn third [x]
   (nth x 2))
-
-(third s)
