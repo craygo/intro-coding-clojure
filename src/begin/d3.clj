@@ -1,14 +1,19 @@
-(ns begin.d3
-  (require [clojure.string :refer [upper-case]]))
+(ns begin.d3)
 
-;; working with collections
-;; map
+;; working with vectors
+;; filter
 
-(def names ["jane" "john" "jim"])
+(def nums [1 2 3 4 5 6 7])
 
-names
+(filter even? nums)
 
-(map upper-case names)
+(filter odd? nums)
 
-(map clojure.string/capitalize names)
+(defn greater-than-four? [x]
+  (> x 4))
 
+(filter greater-than-four? nums)
+
+;; not changed!
+
+nums

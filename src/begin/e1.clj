@@ -1,6 +1,7 @@
 (ns begin.e)
 
-;; combining 
+;; working with vectors
+;; combining
 
 (def nums [1 2 3 4 5 6 7])
 
