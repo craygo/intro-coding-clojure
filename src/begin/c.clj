@@ -1,6 +1,6 @@
 (ns begin.c)
 
-;; naming and a function
+;; naming
 
 (nth "Hello World" 2)
 
@@ -10,7 +10,8 @@ s
 
 (nth s 2)
 
-(third s)
+(def s "See ya' later!")
 
-(defn third [x]
-  (nth x 2))
+s
+
+(nth s 2)

@@ -2,12 +2,12 @@
 
 ;; naming
 
-(def pi 3.1415)
+(def pi 3.1415926)
 
 (def my-message "Hello world")
 
 (defn square [x] 
-           (* x x) )
+  (* x x) )
 
 (def some-numbers [1 2 3 4])
 
@@ -17,4 +17,8 @@ my-message
 
 (square 4)
 
+some-numbers
+
 (second some-numbers)
+
+(square (second some-numbers))

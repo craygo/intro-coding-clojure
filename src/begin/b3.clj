@@ -1,15 +1,15 @@
 (ns begin.b3)
 
-; first and rest
+;; first, rest and second
+
+(first "Hello World")
 
 (rest "Hello World")
 
-(rest (rest "Hello World"))
+(first 
+  (rest "Hello World")
+  )
 
-(first (rest (rest "Hello World")))
+(second "Hello World")
 
-(->
-  "Hello World"
-  rest
-  rest
-  first)
+; third ?
