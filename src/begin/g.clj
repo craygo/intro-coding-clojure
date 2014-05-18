@@ -1,4 +1,4 @@
-(ns part2.a)
+(ns begin.g)
 
 ;; collection to single number
 

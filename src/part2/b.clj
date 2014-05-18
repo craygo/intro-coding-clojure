@@ -15,4 +15,3 @@
 (def me2 (assoc me :likes-to "code"))
 
 (:likes-to me2)
-

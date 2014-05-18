@@ -1,12 +1,13 @@
 (ns part2.c
-  (require [clojure.string :refer [capitalize]]))
+  (require [clojure.string :refer [capitalize join]]))
 
 ;; vector of maps
 
 (def workshop
   [
-   {:first-name "liam"}
-   {:first-name "carsten"}
+   {:first-name "liam" :likes "startups"}
+   {:first-name "carsten" :likes "php"}
+   {:first-name "harry" :likes "startups"}
    ]
   )
 
@@ -14,12 +15,26 @@ workshop
 
 (map :first-name workshop)
 
-(def first-names ["liam" "carsten"])
+(defn string-first-names [people]
+  (join ", " (map :first-name people)))
 
-first-names
+(string-first-names workshop)
 
-(map 
-  #(assoc {} :first-name 
-             (capitalize %)
-             ) 
-     first-names)
+(map :likes workshop)
+
+(group-by :likes workshop)
+
+(first (group-by :likes workshop))
+
+(second (group-by :likes workshop))
+
+(map (fn [x] (type x)) (group-by :likes workshop))
+     
+(map (fn [[thing people]] people) (group-by :likes workshop))
+
+(defn likes-thing [[thing people]]
+  (str "people who like " thing ": "
+        (string-first-names people)))
+
+(map likes-thing (group-by :likes workshop))
+
